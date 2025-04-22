@@ -13,10 +13,14 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        figblue: "#2D6AE1"
       },
       fontFamily: {
         helvetica: "HelveticaNowText",
         monserrat: "Montserrat"
+      },
+      screens: {
+        "1xl": "1440px"
       }
     },
   },

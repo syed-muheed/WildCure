@@ -1,4 +1,5 @@
 
+import Navbar from "@/components/navbar";
 import "./globals.css";
 import "@/public/fonts/wildfonts/stylesheet.css"
 
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body
         className={`antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
