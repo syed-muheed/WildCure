@@ -4,6 +4,7 @@ import Textline from '@/components/textline'
 import Incorporated from './incorporated'
 import Fourgrids from './fourgrids'
 import Featured from './featured'
+import Ourexpertise from './ourexpertise'
 
 const Homewrapper = () => {
     return (
@@ -13,6 +14,7 @@ const Homewrapper = () => {
             <Incorporated />
             <Fourgrids />
             <Featured />
+            <Ourexpertise />
 
         </div>
     )
