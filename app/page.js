@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <div className=" w-full ">
       <Homewrapper />
-      <div className=" h-[300px] bg-white " ></div>
     </div>
   );
 }
