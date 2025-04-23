@@ -21,9 +21,8 @@ const Navbar = () => {
   }, []);
   return (
     <div
-      className={` fixed px-6 py-4 top-0 left-0 w-full flex items-center justify-between z-[1000] ${
-        isScrolled && "bg-black/10 backdrop-blur-lg"
-      }  transition-all duration-150 `}
+      className={` fixed px-6 py-4 top-0 left-0 w-full flex items-center justify-between z-[1000] ${isScrolled && "bg-black/10 backdrop-blur-lg"
+        }  transition-all duration-150 `}
     >
       <div className=" bg-black/30 px-[22px] py-[10px] gap-8 flex items-center rounded-full  ">
         <div className=" cursor-pointer text-white text-[14px] font-normal font-helvetica  ">
