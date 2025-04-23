@@ -1,8 +1,5 @@
 import React from 'react'
-import src1 from "@/public/images/aboutus1.png"
-import src2 from "@/public/images/aboutus2.png"
-import src3 from "@/public/images/aboutus3.png"
-import Image from 'next/image'
+
 import Padding from '@/components/padding'
 
 const Pharma = () => {
