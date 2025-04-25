@@ -5,7 +5,7 @@ import React, { useState } from "react";
 
 const Pharmaceuticals = () => {
   const [select, setSelect] = useState("All Variants");
-  const [category,setCategory]=useState("All Categories")
+  const [category, setCategory] = useState("All Categories");
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
 
@@ -15,42 +15,42 @@ const Pharmaceuticals = () => {
       pharmacopeia: ["BP", "USP", "EP", "IP"],
       category: "Active Pharmaceutical Ingredients",
       catabbr: "API",
-      application: "Anesthetic, Analgesic"
+      application: "Anesthetic, Analgesic",
     },
     {
       name: "Hydroxylinine Hydrochloride",
       pharmacopeia: ["BP", "USP", "EP", "IP"],
       category: "Active Pharmaceutical Ingredients",
       catabbr: "API",
-      application: "Antihistamine, Sedative"
+      application: "Antihistamine, Sedative",
     },
     {
       name: "Esketamine Hydrochloride",
       pharmacopeia: ["EP"],
       category: "Active Pharmaceutical Ingredients",
       catabbr: "API",
-      application: "Antidepressant, Anesthetic"
+      application: "Antidepressant, Anesthetic",
     },
     {
       name: "Quinapyramine Chloride",
       pharmacopeia: ["B Vet C"],
       category: "Active Pharmaceutical Ingredients",
       catabbr: "API",
-      application: "Veterinary Antiprotozoal"
+      application: "Veterinary Antiprotozoal",
     },
     {
       name: "Sodium Alendronate",
       pharmacopeia: ["BP"],
       category: "Active Pharmaceutical Ingredients",
       catabbr: "API",
-      application: "Osteoporosis Treatment"
+      application: "Osteoporosis Treatment",
     },
     {
       name: "Bromhexine Hydrochloride",
       pharmacopeia: ["BP", "IP"],
       category: "Active Pharmaceutical Ingredients",
       catabbr: "API",
-      application: "Mucolytic Agent"
+      application: "Mucolytic Agent",
     },
     {
       name: "Calcium Glycerophosphate",
@@ -58,7 +58,7 @@ const Pharmaceuticals = () => {
       additionalInfo: "50% W/W solution",
       category: "Inorganic Chemicals",
       catabbr: "IC",
-      application: "Mineral Supplement"
+      application: "Mineral Supplement",
     },
     {
       name: "Magnesium Glycerophosphate",
@@ -66,7 +66,7 @@ const Pharmaceuticals = () => {
       additionalInfo: "50% solution",
       category: "Inorganic Chemicals",
       catabbr: "IC",
-      application: "Electrolyte Replenisher"
+      application: "Electrolyte Replenisher",
     },
     {
       name: "Sodium Glycerophosphate",
@@ -74,22 +74,31 @@ const Pharmaceuticals = () => {
       additionalInfo: "50% solution",
       category: "Inorganic Chemicals",
       catabbr: "IC",
-      application: "Nutritional Supplement"
-    }
+      application: "Nutritional Supplement",
+    },
   ];
-  
+
+  const sortedProducts = products.filter((item) => {
+    const categoryMatch =
+      category === "All Categories" || item.category === category;
+
+    const variantMatch =
+      select === "All Variants" || item.pharmacopeia.includes(select);
+
+    return categoryMatch && variantMatch;
+  });
 
   return (
-    <div className=" w-full flex flex-col items-center justify-center gap-4 min-h-[200vh] ">
+    <div className=" w-full flex flex-col items-center justify-center gap-4  pb-16 ">
       <div className=" text-figblue font-monserrat font-bold text-[32px] md:text-[48px] w-full lg:w-[800px] text-center leading-[1.2]   ">
         High-Quality Pharmaceutical Ingredients
       </div>
 
-      <div className=" font-helvetica text-[16px] flex items-center justify-center text-[#323235] w-[90%] md:py-6  ">
+      <div className=" font-helvetica text-[16px] flex items-center justify-center text-[#323235] w-[90%] md:pt-6 text-center  ">
         Manufactured to precision standards to meet the highest quality
         requirements
       </div>
-{/* 
+      {/* 
       <div className=" hidden md:flex items-center p-[3px] font-helvetica font-medium  rounded-full border-[1px] ">
         {options.map((item, index) => (
           <div
@@ -108,17 +117,16 @@ const Pharmaceuticals = () => {
         ))}{" "}
       </div> */}
 
-      <div className=" font-helvetica text-[16px] text-[#323235] w-[95%] md:w-[600px] text-center py-6  ">
+      <div className=" font-helvetica text-[16px] text-[#323235] w-[95%] md:w-[600px] text-center pt-2 pb-6  ">
         Wildcure Pharma specializes in the development and manufacturing of
         high-purity Active Pharmaceutical Ingredients (APIs) that meet stringent
         international pharmacopeia standards. Our APIs are manufactured in our
         state-of-the-art cGMP facility under strict quality control.
       </div>
 
-      <div className=" w-[90%] xl:w-[80%] flex items-center justify-center gap-2 pb-6 ">
-
-<div
-          className=" cursor-pointer border-[1px] h-[50px] px-2 flex items-center justify-between rounded-xl  w-[500px] relative   "
+      <div className=" w-[90%] xl:w-[80%] flex flex-col lg:flex-row items-center justify-center gap-2 pb-6 ">
+        <div
+          className=" cursor-pointer border-[1px] h-[50px] px-2 flex items-center justify-between rounded-xl w-[95%] lg:w-[500px] relative   "
           onClick={() => {
             setOpen1(!open1);
           }}
@@ -131,7 +139,7 @@ const Pharmaceuticals = () => {
 
           {open1 && (
             <div
-              className={` w-full absolute border-[1px] rounded-lg  bg-white - left-0 top-[52px] shadow-lg  transition-all duration-200  `}
+              className={` w-full absolute border-[1px] rounded-lg  bg-white - left-0 top-[52px] shadow-lg  transition-all duration-200 z-[1]  `}
             >
               <div
                 className=" font-helvetica hover:bg-gray-300 transition-all px-2 rounded-lg py-1 "
@@ -149,7 +157,7 @@ const Pharmaceuticals = () => {
               >
                 Active Pharmaceutical Ingredients
               </div>
-             
+
               <div
                 className=" font-helvetica hover:bg-gray-300 transition-all px-2 rounded-lg py-1 "
                 onClick={() => {
@@ -158,13 +166,12 @@ const Pharmaceuticals = () => {
               >
                 Inorganic Chemicals
               </div>
-             
             </div>
           )}
         </div>
 
         <div
-          className=" cursor-pointer border-[1px] h-[50px] px-2 flex items-center justify-between rounded-xl  w-[500px] relative   "
+          className=" cursor-pointer border-[1px] h-[50px] px-2 flex items-center justify-between rounded-xl w-[95%] lg:w-[500px] relative   "
           onClick={() => {
             setOpen(!open);
           }}
@@ -224,13 +231,18 @@ const Pharmaceuticals = () => {
         </div>
       </div>
 
-
-      <div className=" grid grid-cols-3 gap-x-6 gap-y-6 " >
-        {
-            products.map((item,index)=>(
-                <Pharmacard key={index} name={item.name} cat={item.category} pharm={item.pharmacopeia} additional={item?.additionalInfo} abbr={item.catabbr} application={item.application} />
-            )) 
-        }
+      <div className=" grid grid-cols-1 max-[600px]:place-items-center max-[600]:w-full lg:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-6 ">
+        {sortedProducts.map((item, index) => (
+          <Pharmacard
+            key={index}
+            name={item.name}
+            cat={item.category}
+            pharm={item.pharmacopeia}
+            additional={item?.additionalInfo}
+            abbr={item.catabbr}
+            application={item.application}
+          />
+        ))}
       </div>
 
       {/* <div className=" w-[90%] xl:w-[80%] ">
