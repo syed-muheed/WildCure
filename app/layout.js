@@ -2,6 +2,7 @@
 import Navbar from "@/components/navbar";
 import "./globals.css";
 import "@/public/fonts/wildfonts/stylesheet.css"
+import Footer from "@/sections/home/footer";
 
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );

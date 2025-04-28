@@ -1,3 +1,4 @@
+import Approach from '@/sections/aboutus/approach'
 import Mvision from '@/sections/aboutus/mvision'
 import Ourstory from '@/sections/aboutus/ourstory'
 import Pharma from '@/sections/aboutus/pharma'
@@ -9,6 +10,7 @@ const Page = () => {
       <Ourstory/>
       <Pharma/>
       <Mvision/>
+      <Approach/>
     </div>
   )
 }
