@@ -8,11 +8,11 @@ import React from "react";
 const Achivements = () => {
   return (
     <div className=" w-full flex flex-col items-center justify-center py-28 px-6 gap-8 ">
-      <div className=" text-[#1F1F21] font-monserrat font-bold text-[38px]   ">
+      <div className=" text-[#1F1F21] font-monserrat font-bold text-[38px] text-center   ">
         Statistics & Achievements
       </div>
 
-      <div className=" grid  max-[600px]:grid-cols-1  max-[1300px]:gap-y-6 max-[1300px]:grid-cols-2  grid-cols-4 gap-x-6 ">
+      <div className=" grid grid-cols-1  md:grid-cols-2 gap-y-6   xl:grid-cols-4 gap-x-6 ">
         <Achivebox
           img={achive1}
           number={"01"}
