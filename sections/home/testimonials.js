@@ -4,7 +4,7 @@ import React from "react";
 const Testimonials = () => {
   return (
     <div className=" flex flex-col items-center justify-center w-full py-36 gap-12 md:gap-20 xl:gap-12 ">
-      <div className=" text-[#1F1F21] font-monserrat font-bold text-[38px]   ">
+      <div className=" text-[#1F1F21] font-monserrat font-bold text-[32px] md:text-[38px]   ">
         Client Testimonials
       </div>
       <div className=" flex flex-col xl:flex-row w-full items-center gap-16 xl:gap-0 xl:items-start justify-around  ">

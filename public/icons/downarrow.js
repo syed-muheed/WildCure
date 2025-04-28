@@ -1,6 +1,6 @@
 import React from "react";
 
-const Downarrow = () => {
+const Downarrow = ({ color }) => {
   return (
     <div>
       <svg
@@ -12,7 +12,7 @@ const Downarrow = () => {
       >
         <path
           d="M13.2802 5.9668L8.93355 10.3135C8.42022 10.8268 7.58022 10.8268 7.06688 10.3135L2.72021 5.9668"
-          stroke="#737579"
+          stroke={color || "#737579"}
           strokeWidth="1.2"
           strokeMiterlimit="10"
           strokeLinecap="round"
