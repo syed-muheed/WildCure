@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="text-[3.5rem] text-center md:text-left md:text-[2.3rem] xl:text-[3.8rem] leading-[4rem] font-bold xl:leading-[5rem] ">
               WILDCURE
             </div>
-            <div className="text-[1.2rem] w-[19rem] md:w-[20rem] mx-auto xl:mx-0 md:pl-0 tracking-[2.7rem] md:tracking-[1.6rem] xl:tracking-[3.1rem] text-center md:text-left font-medium md:text-[1.1rem] xl:text-[1.3rem] text-[#2D6AE1] leading-none">
+            <div className="text-[1rem] w-[18rem] md:w-[20rem] mx-auto xl:mx-0 md:pl-0 tracking-[2.7rem] md:tracking-[1.6rem] xl:tracking-[3.1rem] text-center md:text-left font-medium md:text-[1.1rem] xl:text-[1.3rem] text-[#2D6AE1] leading-none">
               PHARMA
             </div>
           </div>
