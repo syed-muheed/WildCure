@@ -89,7 +89,7 @@ const Pharmaceuticals = () => {
   });
 
   return (
-    <div className=" w-full flex flex-col items-center justify-center gap-4  pb-16 ">
+    <div className=" w-full flex flex-col items-center justify-center gap-4  pb-28 ">
       <div className=" text-figblue font-monserrat font-bold text-[32px] md:text-[48px] w-full lg:w-[800px] text-center leading-[1.2]   ">
         High-Quality Pharmaceutical Ingredients
       </div>
