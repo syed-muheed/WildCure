@@ -20,7 +20,7 @@ const Commitment = () => {
           </div>
         </div>
 
-        <div className=" absolute bottom-14 left-0 w-full ">
+        <div className=" absolute bottom-6 md:bottom-14 left-0 w-full ">
           <Crazymarquee />
         </div>
       </div>
