@@ -99,15 +99,19 @@ const Navbar = () => {
           </div>
         </Link>
 
-        <div
-          className={` px-[24px] py-[14px] ${
-            pathname == "/quality" || pathname == "/manufacturing"
-              ? "bg-[#084BCE10]  border-[#084BCE40] text-[#084BCE]"
-              : "bg-white/20 backdrop-blur-sm border-white text-white"
-          } hidden md:block   border-[1px] rounded-full text-[16px] font-helvetica font-medium leading-[1]   `}
-        >
-          Contact Us
-        </div>
+        <Link href={"/contactus"}>
+          <div
+            className={` px-[24px] py-[14px] ${
+              pathname == "/quality" ||
+              pathname == "/manufacturing" ||
+              pathname == "/contactus"
+                ? "bg-[#084BCE10]  border-[#084BCE40] text-[#084BCE]"
+                : "bg-white/20 backdrop-blur-sm border-white text-white"
+            } hidden md:block   border-[1px] rounded-full text-[16px] font-helvetica font-medium leading-[1]   `}
+          >
+            Contact Us
+          </div>
+        </Link>
 
         <div
           className=" flex md:hidden flex-col items-end gap-2 cursor-pointer "
@@ -121,21 +125,27 @@ const Navbar = () => {
             <>
               <div
                 className={` w-[30px] min-h-[3px] ${
-                  pathname == "/quality" || pathname == "/manufacturing"
+                  pathname == "/quality" ||
+                  pathname == "/manufacturing" ||
+                  pathname == "/contactus"
                     ? " bg-[#084BCE] "
                     : "bg-white"
                 } rounded-full `}
               ></div>
               <div
                 className={` w-[40px] min-h-[3px] ${
-                  pathname == "/quality" || pathname == "/manufacturing"
+                  pathname == "/quality" ||
+                  pathname == "/manufacturing" ||
+                  pathname == "/contactus"
                     ? " bg-[#084BCE] "
                     : "bg-white"
                 } rounded-full `}
               ></div>
               <div
                 className={` w-[30px] min-h-[3px] ${
-                  pathname == "/quality" || pathname == "/manufacturing"
+                  pathname == "/quality" ||
+                  pathname == "/manufacturing" ||
+                  pathname == "/contactus"
                     ? " bg-[#084BCE] "
                     : "bg-white"
                 } rounded-full `}
