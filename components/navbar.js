@@ -156,7 +156,7 @@ const Navbar = () => {
       </div>
       {click && (
         <div
-          className=" fixed flex md:hidden top-0 left-0 bg-black/30 backdrop-blur-sm h-full w-full z-[100]  flex-col gap-4 items-center justify-center "
+          className=" fixed flex md:hidden top-0 left-0 bg-black/50 backdrop-blur-sm h-full w-full z-[100]  flex-col gap-4 items-center justify-center "
           onClick={() => {
             setClick(false);
           }}
@@ -185,6 +185,11 @@ const Navbar = () => {
             <div className=" cursor-pointer text-white text-[24px] font-medium font-helvetica  ">
               Global Presence
             </div>
+            <Link href={"/contactus"}>
+              <div className=" cursor-pointer text-white text-[24px] font-medium font-helvetica  ">
+                Contact Us
+              </div>
+            </Link>
           </div>
         </div>
       )}

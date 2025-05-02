@@ -1,11 +1,23 @@
 "use client";
+import Downarrow from "@/public/icons/downarrow";
+import { useParams, useSearchParams } from "next/navigation";
 import React, { useState } from "react";
 
 const Contactform = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
   const [company, setCompany] = useState("");
   const [codeobj, setCodeObject] = useState({ country: "India", code: "+91" });
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
+  const [enquiry, setEnuiry] = useState("");
+
+  const params = useSearchParams();
+
+  const msg = params.get("msg") || "";
+  const [message, setMessage] = useState(msg);
 
   const countryCallingCodes = [
     { country: "Afghanistan", code: "+93" },
@@ -250,9 +262,17 @@ const Contactform = () => {
     { country: "Zimbabwe", code: "+263" },
   ];
 
+  const inquiryTypeOptions = [
+    "General Inquiry",
+    "Product Information",
+    "Pricing & Quotation",
+    "Partnership Opportunities",
+    "Technical Support",
+  ];
+
   return (
-    <div className=" flex flex-col gap-3 ">
-      <div className=" flex gap-6 ">
+    <div className=" flex flex-col gap-3 w-full md:w-fit ">
+      <div className=" flex flex-col md:flex-row gap-3 md:gap-6 ">
         <div className=" flex flex-col gap-1 ">
           <div className=" text-[#626366] font-helvetica font-medium text-[16px] relative left-1  ">
             Name{" "}
@@ -280,7 +300,7 @@ const Contactform = () => {
           />
         </div>
       </div>
-      <div className=" flex gap-6 ">
+      <div className=" flex flex-col md:flex-row gap-3 md:gap-6 ">
         <div className=" flex flex-col gap-1 ">
           <div className=" text-[#626366] font-helvetica font-medium text-[16px] relative left-1  ">
             Company{" "}
@@ -296,20 +316,142 @@ const Contactform = () => {
         </div>
         <div className=" flex flex-col gap-1 ">
           <div className=" text-[#626366] font-helvetica font-medium text-[16px] relative left-1  ">
-            Email{" "}
+            Phone Number{" "}
           </div>
-          <div className=" flex items-center border-[1px] border-[#DEE3EE]  min-w-[222px]  pl-3 rounded-xl ">
-            <div className=" border-r-[1px] pr-2 py-3  text-[#929296] " >{codeobj?.country ? `${codeobj?.code}` :"00"}</div>
+          <div
+            className=" flex items-center border-[1px] border-[#DEE3EE]  w-full md:w-[222px]  pl-2 rounded-xl relative "
+            onClick={() => {
+              setOpen(!open);
+            }}
+            onMouseLeave={() => {
+              setOpen(false);
+            }}
+          >
+            <div className=" min-w-fit border-r-[1px] pr-1 py-3  text-[#929296] flex items-center cursor-pointer gap-[2px] ">
+              <div>{codeobj?.country ? `${codeobj?.code}` : "00"}</div>
+              <div className=" scale-90 ">
+                <Downarrow />
+              </div>
+            </div>
             <input
               onChange={(e) => {
-                setEmail(e.target.value);
+                if (number.length < 10) {
+                  setNumber(e.target.value);
+                }
               }}
-              placeholder="Enter Email..."
-              type="text"
-              className=" outline-none py-3 pl-2 placeholder:text-[#929296] font-helvetica   "
+              placeholder="Enter Ph.no"
+              type="number"
+              className=" no-spinners outline-none w-full rounded-2xl py-3 pl-2 placeholder:text-[#929296] font-helvetica   "
             />
+            {open && (
+              <div className=" absolute z-[2] left-0 top-[49px] bg-white border-[#DEE3EE] border-[1px] px-1 py-2 rounded-xl w-full h-[200px] overflow-y-scroll text-[#929296] flex flex-col gap-2 ">
+                {countryCallingCodes.map((item, index) => (
+                  <div
+                    key={index}
+                    className=" text-[14px] font-helvetica flex items-center gap-2 hover:bg-gray-100 duration-150 cursor-pointer px-1 rounded-md "
+                    onClick={() => {
+                      setCodeObject(item);
+                    }}
+                  >
+                    <span className=" w-[50px] ">{item.code}</span>
+                    <span>{item.country}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
+      </div>
+      <div className=" flex flex-col md:flex-row gap-3 md:gap-6 ">
+        <div className=" flex flex-col gap-1 ">
+          <div className=" text-[#626366] font-helvetica font-medium text-[16px] relative left-1  ">
+            Country{" "}
+          </div>
+          <div
+            className=" flex items-center border-[1px] border-[#DEE3EE] w-full  md:w-[222px]  pl-2 rounded-xl relative "
+            onClick={() => {
+              setOpen2(!open2);
+            }}
+            onMouseLeave={() => {
+              setOpen2(false);
+            }}
+          >
+            <div className=" w-full px-2 py-3  text-[#929296] flex items-center justify-between cursor-pointer gap-[2px] ">
+              <div>
+                {codeobj?.country ? `${codeobj?.country}` : "Select Country"}
+              </div>
+              <Downarrow />
+            </div>
+
+            {open2 && (
+              <div className=" absolute z-[2] left-0 top-[49px] bg-white border-[#DEE3EE] border-[1px] px-1 py-2 rounded-xl w-full h-[200px] overflow-y-scroll text-[#929296] flex flex-col gap-2 ">
+                {countryCallingCodes.map((item, index) => (
+                  <div
+                    key={index}
+                    className=" text-[14px] font-helvetica flex items-center gap-2 hover:bg-gray-100 duration-150 cursor-pointer px-1 rounded-md "
+                    onClick={() => {
+                      setCodeObject(item);
+                    }}
+                  >
+                    <span>{item.country}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+        <div className=" flex flex-col max-[768px]:w-full gap-1 ">
+          <div className=" text-[#626366] font-helvetica font-medium text-[16px] relative left-1  ">
+            Inquiry Type{" "}
+          </div>
+          <div
+            className=" w-full flex items-center border-[1px] border-[#DEE3EE]  md:w-[222px]  pl-2 rounded-xl relative "
+            onClick={() => {
+              setOpen3(!open3);
+            }}
+            onMouseLeave={() => {
+              setOpen3(false);
+            }}
+          >
+            <div className=" w-full px-2 py-3  text-[#929296] flex items-center justify-between cursor-pointer gap-[2px] ">
+              <div>{enquiry || "Select Inquiry"}</div>
+              <Downarrow />
+            </div>
+
+            {open3 && (
+              <div className=" absolute z-[2] left-0 top-[49px] bg-white border-[#DEE3EE] border-[1px] px-1 py-2 rounded-xl w-full text-[#929296] flex flex-col gap-2 ">
+                {inquiryTypeOptions.map((item, index) => (
+                  <div
+                    key={index}
+                    className=" text-[14px] font-helvetica flex items-center gap-2 hover:bg-gray-100 duration-150 cursor-pointer px-1 rounded-md "
+                    onClick={() => {
+                      setEnuiry(item);
+                    }}
+                  >
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+      <div className=" flex flex-col gap-1 w-full ">
+        <div className=" text-[#626366] font-helvetica font-medium text-[16px] relative left-1  ">
+          Message
+        </div>
+        <textarea
+          onChange={(e) => {
+            setMessage(e.target.value);
+          }}
+          value={message}
+          placeholder="Enter Message"
+          type="text"
+          className=" outline-none h-[130px] border-[1px] border-[#DEE3EE] placeholder:text-[#929296] font-helvetica  min-w-full py-3 pl-4 rounded-xl resize-none  "
+        />
+      </div>
+      <div className=" py-4 cursor-pointer leading-[1] bg-figblue text-white w-full rounded-full font-helvetica text-[16px] font-medium flex items-center justify-center  ">
+        Submit
       </div>
     </div>
   );

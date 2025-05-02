@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Pharmacard = ({ name, pharm, cat, additional, abbr, application }) => {
@@ -46,10 +47,13 @@ const Pharmacard = ({ name, pharm, cat, additional, abbr, application }) => {
             </div>
           )}
         </div>
-
-        <div className=" bg-[#084BCE10] border-[#084BCE40] text-[#084BCE] text-[16px] font-helvetica font-medium w-full flex justify-center py-[14px] px-6 border rounded-full cursor-pointer leading-[1]   ">
-          Request Information
-        </div>
+        <Link
+          href={`/contactus?msg=I%20like%20to%20know%20information%20about%20${name}`}
+        >
+          <div className=" bg-[#084BCE10] border-[#084BCE40] text-[#084BCE] text-[16px] font-helvetica font-medium w-full flex justify-center py-[14px] px-6 border rounded-full cursor-pointer leading-[1]   ">
+            Request Information
+          </div>
+        </Link>
       </div>
     </div>
   );
