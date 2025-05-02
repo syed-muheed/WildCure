@@ -1,3 +1,4 @@
+import Distribution from '@/sections/global/distribution'
 import Expanding from '@/sections/global/expanding'
 import Network from '@/sections/global/network'
 import Operations from '@/sections/global/operations'
@@ -10,6 +11,7 @@ const Page = () => {
       <Expanding/>
       <Network/>
       <Regional/>
+      <Distribution/>
       <Operations/>
     </div>
   )
