@@ -1,5 +1,7 @@
+"use client"
 import React from "react";
 import Contactform from "./contactform";
+import { Suspense } from "react";
 
 const Contactus = () => {
   return (
@@ -21,7 +23,10 @@ const Contactus = () => {
           </div>
         </div>
       </div>
+      <Suspense fallback={<div>Loading..</div>} >
+
       <Contactform />
+      </Suspense>
     </div>
   );
 };
