@@ -13,16 +13,16 @@ const Techno3 = () => {
         <path
           d="M48 72C65.6731 72 80 57.6731 80 40C80 22.3269 65.6731 8 48 8C30.3269 8 16 22.3269 16 40C16 57.6731 30.3269 72 48 72Z"
           stroke="#8DADEB"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M24 88H72"
           stroke="#8DADEB"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </div>

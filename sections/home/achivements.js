@@ -16,7 +16,7 @@ const Achivements = () => {
         <Achivebox
           img={achive1}
           number={"01"}
-          head={"150+"}
+          head={"15+"}
           text={"Countries Served"}
         />
         <Achivebox

@@ -44,9 +44,11 @@ const Navbar = () => {
               Home
             </div>
           </Link>
+          <Link href={"/aboutus"}>
           <div className=" cursor-pointer text-white text-[14px] font-normal font-helvetica  ">
             About
           </div>
+          </Link>
           <div
             className=" cursor-pointer text-white text-[14px] font-normal font-helvetica flex items-center gap-2  "
             onMouseEnter={() => {
@@ -86,9 +88,21 @@ const Navbar = () => {
                     Quality
                   </div>
                 </Link>
+                <Link href={"/global"}>
                 <div className=" cursor-pointer text-white text-[14px] font-normal font-helvetica  ">
                   Global Presence
                 </div>
+                </Link>
+                <Link href={"/privacypolicy"}>
+                <div className=" cursor-pointer text-white text-[14px] font-normal font-helvetica  ">
+                  Privacy Policy
+                </div>
+                </Link>
+                <Link href={"/T&C"}>
+                <div className=" cursor-pointer text-white text-[14px] font-normal font-helvetica  ">
+                  Terms of Use
+                </div>
+                </Link>
               </div>
             </div>
           )}
