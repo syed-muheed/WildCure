@@ -1,3 +1,4 @@
+import Loadingwrap from '@/components/loadingwrap'
 import Distribution from '@/sections/global/distribution'
 import Expanding from '@/sections/global/expanding'
 import Network from '@/sections/global/network'
@@ -7,6 +8,8 @@ import React from 'react'
 
 const Page = () => {
   return (
+    <>
+    <Loadingwrap/>
     <div>
       <Expanding/>
       <Network/>
@@ -14,6 +17,7 @@ const Page = () => {
       <Distribution/>
       <Operations/>
     </div>
+    </>
   )
 }
 

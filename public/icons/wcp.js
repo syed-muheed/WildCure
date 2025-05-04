@@ -16,7 +16,10 @@ const Wcp = () => {
         fill={
           pathname == "/quality" ||
           pathname == "/manufacturing" ||
-          pathname == "/contactus"
+          pathname == "/contactus" ||
+          pathname == "/global"||
+          pathname == "/privacypolicy"||
+          pathname == "/T&C"
             ? " #084BCE "
             : "white"
         }
@@ -26,7 +29,10 @@ const Wcp = () => {
         fill={
           pathname == "/quality" ||
           pathname == "/manufacturing" ||
-          pathname == "/contactus"
+          pathname == "/contactus" ||
+          pathname == "/global"||
+          pathname == "/privacypolicy"||
+          pathname == "/T&C"
             ? " #084BCE "
             : "white"
         }
@@ -38,7 +44,10 @@ const Wcp = () => {
         fill={
           pathname == "/manufacturing" ||
           pathname == "/quality" ||
-          pathname == "/contactus"
+          pathname == "/contactus" ||
+          pathname == "/global"||
+          pathname == "/privacypolicy"||
+          pathname == "/T&C"
             ? " #084BCE "
             : "white"
         }
@@ -50,7 +59,10 @@ const Wcp = () => {
         fill={
           pathname == "/quality" ||
           pathname == "/manufacturing" ||
-          pathname == "/contactus"
+          pathname == "/contactus" ||
+          pathname == "/global"||
+          pathname == "/privacypolicy"||
+          pathname == "/T&C"
             ? " #084BCE "
             : "white"
         }

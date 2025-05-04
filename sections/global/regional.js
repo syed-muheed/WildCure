@@ -8,7 +8,7 @@ import Padding from '@/components/padding'
 
 const Regional = () => {
   return (
-    <Padding className='font-monserrat pt-[8rem]'>
+    <Padding className='font-monserrat pb-10  pt-[8rem]'>
       <div className='text-center text-[2.3rem] md:text-[2.5rem] lg:text-[3rem] text-[#084BCE] font-bold leading-[3rem]'>Regional Market Strategy</div>
       <div className='text-center text-[#323235] text-[14px]  max-w-[23rem] md:max-w-[40rem] lg:max-w-[50rem] mx-auto pt-[1.5rem]'>Our global operations maintain rigorous compliance with international standards and regulations, including country-specific pharmaceutical requirements, comprehensive documentation support, and regular audits by international regulatory bodies. Our regulatory affairs team provides complete support for global market access, ensuring smooth registration processes across diverse markets.</div>
       <div className='pt-[3rem] space-y-10'>
