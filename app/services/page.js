@@ -15,9 +15,6 @@ const Page = () => {
       <Textline />
       <Activesection />
       <Pharmaceuticals />
-      <Commitment />
-      <Achivements />
-      <Discover />
     </div>
   );
 };
