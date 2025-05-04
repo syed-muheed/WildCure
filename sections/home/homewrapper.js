@@ -20,9 +20,6 @@ const Homewrapper = () => {
       <Featured />
       <Ourexpertise />
       <Testimonials />
-      <Commitment />
-      <Achivements />
-      <Discover />
     </div>
   );
 };

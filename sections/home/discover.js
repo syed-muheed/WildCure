@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import src from "@/public/images/bluebg.png";
+import Link from "next/link";
 const Discover = () => {
   return (
     <div className=" w-full h-screen relative ">
@@ -9,9 +10,11 @@ const Discover = () => {
         <div className=" text-[26px] px-4 lg:px-0 lg:text-[40px] font-bold text-white font-monserrat text-center w-full lg:w-[1000px]  ">
           Discover how Wildcure Pharma can support your pharmaceutical needs.
         </div>
-        <div className=" w-fit rounded-full px-[24px] py-[14px] leading-[1] bg-[#fff] text-[#084BCE] font-helvetica  cursor-pointer hover:scale-105 duration-100 font-medium    ">
-          Contact Us
-        </div>
+        <Link href={"/contactus"}>
+          <div className=" w-fit rounded-full px-[24px] py-[14px] leading-[1] bg-[#fff] text-[#084BCE] font-helvetica  cursor-pointer hover:scale-105 duration-100 font-medium    ">
+            Contact Us
+          </div>
+        </Link>
       </div>
     </div>
   );

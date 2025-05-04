@@ -3,7 +3,7 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div>
+    <div className="pt-[6rem] pb-[8rem]">
       <Contactus />
     </div>
   );

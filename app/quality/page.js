@@ -14,9 +14,6 @@ const Page = () => {
       <Textline />
       <Qualityassurance />
       <Certification />
-      <Commitment />
-      <Achivements />
-      <Discover />
     </div>
   );
 };

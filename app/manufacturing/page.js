@@ -16,9 +16,6 @@ const Page = () => {
         <Ourfacilities />
       </div>
       <Technologia />
-      <Commitment />
-      <Achivements />
-      <Discover />
     </div>
   );
 };
