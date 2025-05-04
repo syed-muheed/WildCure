@@ -10,6 +10,7 @@ import Bluebutton from '@/components/bluebutton'
 import Photolayer from '@/components/photolayer'
 
 const Herosection = () => {
+    
     return (
         <div className=' h-[120vh] w-full relative  ' >
 

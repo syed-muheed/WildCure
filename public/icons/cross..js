@@ -19,7 +19,10 @@ const Cross = () => {
           fill={
             pathname == "/quality" ||
             pathname == "/manufacturing" ||
-            pathname == "/contactus"
+            pathname == "/contactus"  ||
+            pathname == "/global" ||
+            pathname == "/privacypolicy"||
+            pathname == "/T&C"
               ? " #084BCE "
               : "#fff"
           }

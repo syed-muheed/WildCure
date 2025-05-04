@@ -29,10 +29,16 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={` fixed px-6 py-4 top-0 left-0 w-full flex items-center justify-between z-[1000] ${
-          isScrolled && "bg-black/10 backdrop-blur-lg"
-        }  transition-all duration-150 `}
+        className={` fixed px-6 py-4 top-0 left-0 w-full flex items-center justify-between z-[1000] `}
       >
+          <div
+        className={`
+          absolute inset-0
+          bg-black/10 backdrop-blur-lg
+          transition-opacity duration-150
+          ${isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"}
+        `}
+      />
         <div
           className=" bg-black/30 px-[22px] py-[10px] gap-8 hidden md:flex items-center rounded-full relative  "
           onMouseLeave={() => {
@@ -72,7 +78,7 @@ const Navbar = () => {
                 setHovered(false);
               }}
             >
-              <div className="  w-full bg-black/30 px-[16px] py-[10px] gap-3 hidden md:flex flex-col rounded-2xl transition-all backdrop-blur-sm ">
+              <div className=" backdrop-blur-lg  w-full bg-black/30 px-[16px] py-[10px] gap-3 hidden md:flex flex-col rounded-2xl transition-all ">
                 <Link href={"/services"}>
                   <div className=" cursor-pointer text-white text-[14px] font-normal font-helvetica  ">
                     Products & Services
@@ -108,7 +114,7 @@ const Navbar = () => {
           )}
         </div>
         <Link href={"/"}>
-          <div className=" md:absolute md:top-[50%] md:left-[50%] md:-translate-x-1/2 md:-translate-y-1/2 w-[50px] ">
+          <div className=" relative md:absolute z-[12] md:top-[50%] md:left-[50%] md:-translate-x-1/2 md:-translate-y-1/2 w-[50px] ">
             <Wcp />
           </div>
         </Link>
@@ -118,17 +124,20 @@ const Navbar = () => {
             className={` px-[24px] py-[14px] ${
               pathname == "/quality" ||
               pathname == "/manufacturing" ||
-              pathname == "/contactus"
+              pathname == "/contactus" ||
+          pathname == "/global" ||
+          pathname == "/privacypolicy"||
+          pathname == "/T&C"
                 ? "bg-[#084BCE10]  border-[#084BCE40] text-[#084BCE]"
                 : "bg-white/20 backdrop-blur-sm border-white text-white"
-            } hidden md:block   border-[1px] rounded-full text-[16px] font-helvetica font-medium leading-[1]   `}
+            } hidden md:block relative z-[12]   border-[1px] rounded-full text-[16px] font-helvetica font-medium leading-[1]   `}
           >
             Contact Us
           </div>
         </Link>
 
         <div
-          className=" flex md:hidden flex-col items-end gap-2 cursor-pointer "
+          className=" flex  relative z-[12] md:hidden flex-col items-end gap-2 cursor-pointer "
           onClick={() => setClick(!click)}
         >
           {click ? (
@@ -141,7 +150,10 @@ const Navbar = () => {
                 className={` w-[30px] min-h-[3px] ${
                   pathname == "/quality" ||
                   pathname == "/manufacturing" ||
-                  pathname == "/contactus"
+                  pathname == "/contactus" ||
+          pathname == "/global"||
+          pathname == "/privacypolicy"||
+          pathname == "/T&C"
                     ? " bg-[#084BCE] "
                     : "bg-white"
                 } rounded-full `}
@@ -150,7 +162,10 @@ const Navbar = () => {
                 className={` w-[40px] min-h-[3px] ${
                   pathname == "/quality" ||
                   pathname == "/manufacturing" ||
-                  pathname == "/contactus"
+                  pathname == "/contactus" ||
+          pathname == "/global"||
+          pathname == "/privacypolicy"||
+          pathname == "/T&C"
                     ? " bg-[#084BCE] "
                     : "bg-white"
                 } rounded-full `}
@@ -159,7 +174,10 @@ const Navbar = () => {
                 className={` w-[30px] min-h-[3px] ${
                   pathname == "/quality" ||
                   pathname == "/manufacturing" ||
-                  pathname == "/contactus"
+                  pathname == "/contactus" ||
+          pathname == "/global"||
+          pathname == "/privacypolicy"||
+          pathname == "/T&C"
                     ? " bg-[#084BCE] "
                     : "bg-white"
                 } rounded-full `}
@@ -196,14 +214,26 @@ const Navbar = () => {
                 Quality
               </div>
             </Link>
+            <Link href={"/global"}>
             <div className=" cursor-pointer text-white text-[24px] font-medium font-helvetica  ">
               Global Presence
             </div>
+            </Link>
             <Link href={"/contactus"}>
               <div className=" cursor-pointer text-white text-[24px] font-medium font-helvetica  ">
                 Contact Us
               </div>
             </Link>
+            <Link href={"/privacypolicy"}>
+                <div className=" cursor-pointer text-white text-[24px] font-normal font-helvetica  ">
+                  Privacy Policy
+                </div>
+                </Link>
+                <Link href={"/T&C"}>
+                <div className=" cursor-pointer text-white text-[24px] font-normal font-helvetica  ">
+                  Terms of Use
+                </div>
+                </Link>
           </div>
         </div>
       )}
