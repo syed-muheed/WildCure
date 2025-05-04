@@ -3,7 +3,7 @@ import React from "react";
 
 const Pharmacard = ({ name, pharm, cat, additional, abbr, application }) => {
   return (
-    <div className=" flex bg-[#F6F7FA] p-[10px] border-[1px] border-[#BBC9E3] rounded-lg  flex-col w-[92%] md:w-[400px] ">
+    <div className=" flex bg-[#F6F7FA] p-[10px] border-[1px] border-[#BBC9E3] rounded-lg  flex-col w-[100%] md:w-[400px] ">
       <div className=" w-full flex items-center justify-between pb-3 px-2 ">
         <div className=" font-helvetica text-[18px] font-bold text-[#39393D] ">
           {name}

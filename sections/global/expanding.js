@@ -5,10 +5,10 @@ import src from "@/public/images/blur.png";
 
 const Expanding = () => {
   return (
-    <Padding className={"pt-[5rem] font-monserrat"}>
+    <Padding className={" pt-[1rem] md:pt-[5rem] font-monserrat"}>
       <div
         style={{ backgroundImage: "url('/images/WorldMap.png')" }}
-        className="h-screen z-0 text-center text-[1.2rem] lg:text-[2.6rem] font-bold text-[#084bce] flex items-center justify-center  bg-contain bg-no-repeat bg-center"
+        className=" h-[500px] md:h-screen z-0 text-center text-[1.2rem] lg:text-[2.6rem] font-bold text-[#084bce] flex items-center justify-center  bg-contain bg-no-repeat bg-center"
       >
         <div className="lg:w-[65rem]  relative z-[10] lg:leading-[3.3rem] ">
           <Image src={src} alt="blur" />

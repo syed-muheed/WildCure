@@ -199,6 +199,11 @@ const Navbar = () => {
                 Home
               </div>
             </Link>
+            <Link href={"/aboutus"}>
+              <div className=" cursor-pointer text-white text-[24px] font-medium font-helvetica  ">
+                About Us
+              </div>
+            </Link>
             <Link href={"/services"}>
               <div className=" cursor-pointer text-white text-[24px] font-medium font-helvetica  ">
                 Products & Services
