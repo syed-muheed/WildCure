@@ -1,3 +1,4 @@
+import Loadingwrap from '@/components/loadingwrap'
 import Approach from '@/sections/aboutus/approach'
 import Leadership from '@/sections/aboutus/leadership'
 import Mvision from '@/sections/aboutus/mvision'
@@ -7,6 +8,8 @@ import React from 'react'
 
 const Page = () => {
   return (
+    <>
+    <Loadingwrap/>
     <div>
       <Ourstory/>
       <Pharma/>
@@ -14,6 +17,7 @@ const Page = () => {
       <Leadership/>s
       <Approach/>
     </div>
+    </>
   )
 }
 

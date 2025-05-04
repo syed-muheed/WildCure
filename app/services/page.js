@@ -1,3 +1,4 @@
+import Loadingwrap from "@/components/loadingwrap";
 import Textline from "@/components/textline";
 import Achivements from "@/sections/home/achivements";
 import Commitment from "@/sections/home/commitment";
@@ -10,12 +11,15 @@ import React from "react";
 
 const Page = () => {
   return (
+    <>
+    <Loadingwrap/>
     <div className=" w-full ">
       <Servicehero />
       <Textline />
       <Activesection />
       <Pharmaceuticals />
     </div>
+    </>
   );
 };
 

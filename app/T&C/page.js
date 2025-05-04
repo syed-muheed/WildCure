@@ -1,8 +1,11 @@
+import Loadingwrap from "@/components/loadingwrap";
 import Padding from "@/components/padding";
 import React from "react";
 
 const Page = () => {
   return (
+    <>
+    <Loadingwrap/>
     <Padding className={"py-[5rem] text-[#79797B] lg:flex gap-4 font-medium"}>
       <Padding className="border xl:w-[20%] border-[#E7EBED] rounded-[1.2rem] hidden xl:flex flex-col py-[3rem] font-monserrat">
         <div className="text-[1.1rem]  text-[black] font-semibold">
@@ -114,6 +117,7 @@ const Page = () => {
         </div>
       </Padding>
     </Padding>
+    </>
   );
 };
 
