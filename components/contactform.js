@@ -339,7 +339,7 @@ const Contactform = () => {
                   setNumber(e.target.value);
                 }
               }}
-              placeholder="Enter Ph.no"
+              placeholder="Enter Phone"
               type="number"
               className=" no-spinners outline-none w-full rounded-2xl py-3 pl-2 placeholder:text-[#929296] font-helvetica   "
             />
