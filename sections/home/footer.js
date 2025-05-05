@@ -45,7 +45,7 @@ const Footer = () => {
               <Link href={"/global"}>
               <div>Global Presence</div>
               </Link>
-              <Link>
+              <Link href={"/contactus"}>
               <div>Contact Us</div>
               </Link>
             </div>
