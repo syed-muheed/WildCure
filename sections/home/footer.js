@@ -2,6 +2,7 @@ import Padding from "@/components/padding";
 import React from "react";
 import src from "@/public/images/footer.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -26,21 +27,39 @@ const Footer = () => {
           <div>
             <div className="font-semibold text-[#919196]">Navigation</div>
             <div className="text-[1.1rem] xl:text-[1.3rem] 2xl:text-[1.5rem] pt-[1rem] font-bold text-[#1F1F21] space-y-2">
+              <Link href={"/"}>
               <div>Home</div>
+              </Link>
+              <Link href={"/aboutus"}>
               <div>About Us</div>
+              </Link>
+              <Link href={"/services"}>
               <div>Products</div>
+              </Link>
+              <Link href={"/manufacturing"}>
               <div>Manufacturing</div>
+              </Link>
+              <Link href={"/quality"}>
               <div>Quality</div>
+              </Link>
+              <Link href={"/global"}>
               <div>Global Presence</div>
+              </Link>
+              <Link>
               <div>Contact Us</div>
+              </Link>
             </div>
           </div>
           <div className="lg:flex gap-[3rem] pt-[4rem] md:pt-0 xl:gap-[5.3rem] 2xl:gap-[8rem]">
           <div>
             <div className="font-semibold text-[#919196]">Legal</div>
             <div className="space-y-1.5 pt-[1rem] font-semibold">
+              <Link href={"/privacypolicy"}>
               <div className="min-w-[7.2rem]">Privacy Policy</div>
+              </Link>
+              <Link href={"/T&C"}>
               <div>Terms of Use</div>
+              </Link>
             </div>
           </div>
           <div className="pt-[4rem] md:pt-[2rem] lg:pt-0">
