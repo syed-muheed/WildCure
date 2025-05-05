@@ -3,6 +3,7 @@ import React from "react";
 import src from "@/public/images/footer.png";
 import Image from "next/image";
 import Link from "next/link";
+import Underanimatetext from "@/components/underanimatetext";
 
 const Footer = () => {
   return (
@@ -30,45 +31,51 @@ const Footer = () => {
         <div className="flex flex-col pt-[4rem] md:pt-0 md:flex-row w-[70%] 2xl:w-[65%] md:pl-[3rem] xl:pl-[8rem] 2xl:pl-0 gap-[3rem] xl:gap-[5.3rem] 2xl:gap-[8rem]">
           <div>
             <div className="font-semibold text-[#919196]">Navigation</div>
-            <div className="text-[1.1rem] xl:text-[1.3rem] 2xl:text-[1.5rem] pt-[1rem] font-bold text-[#1F1F21] space-y-2">
-              <div>
-                <Link href={"/"}>Home</Link>
+            <div className="text-[1.1rem] space-y-1 xl:text-[1.3rem] 2xl:text-[1.5rem] pt-[1rem] font-bold text-[#1F1F21]">
+              <div >
+                <Link href={"/"}>
+                <Underanimatetext text={"Home"} />
+                </Link>
               </div>
               <div>
-                <Link href={"/aboutus"}>About Us</Link>
+                <Link href={"/aboutus"}>
+                <Underanimatetext text={"About Us"} />
+                
+                </Link>
               </div>
               <div>
-                <Link href={"/services"}>Products</Link>
+                <Link href={"/services"}>
+                <Underanimatetext text={"Products"} /></Link>
               </div>
               <div>
-                <Link href={"/manufacturing"}>Manufacturing</Link>
+                <Link href={"/manufacturing"}> <Underanimatetext text={"Manufacturing"} /></Link>
               </div>
               <div>
-                <Link href={"/quality"}>Quality</Link>
+                <Link href={"/quality"}> <Underanimatetext text={"Quality"} /></Link>
               </div>
               <div>
-                <Link href={"/global"}>Global Presence</Link>
+                <Link href={"/global"}> <Underanimatetext text={"Global Presence"} /></Link>
               </div>
               <div>
-                <Link href={"/contactus"}>Contact Us</Link>
+                <Link href={"/contactus"}> <Underanimatetext text={"Contact Us"} /></Link>
               </div>
             </div>
           </div>
           <div className="lg:flex gap-[3rem] pt-[4rem] md:pt-0 xl:gap-[5.3rem] 2xl:gap-[8rem]">
             <div>
               <div className="font-semibold text-[#919196]">Legal</div>
-              <div className="space-y-1.5 pt-[1rem] font-semibold">
+              <div className="space-y-1 pt-[1rem] font-semibold">
                 <div className="min-w-[7.2rem]">
-                  <Link href={"/privacypolicy"}>Privacy Policy</Link>
+                  <Link href={"/privacypolicy"}><Underanimatetext text={"Privacy Policy"} /></Link>
                 </div>
                 <div>
-                  <Link href={"/T&C"}>Terms of Use</Link>
+                  <Link href={"/T&C"}><Underanimatetext text={"Terms Of Use"} /></Link>
                 </div>
               </div>
             </div>
             <div className="pt-[4rem] md:pt-[2rem] lg:pt-0">
               <div className="font-semibold text-[#919196]">Info</div>
-              <div className="w-[15.5rem] pt-[1rem]  font-semibold space-y-3">
+              <div className="w-[15.5rem] pt-[1rem]  font-semibold space-y-3 capitalize">
                 <div>
                   6-26, plot no 78, road no 1, sai aishwarya layout,
                   peerzadiguda, medchal-malkajgiri, Telangana 500039
