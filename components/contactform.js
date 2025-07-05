@@ -475,7 +475,7 @@ const handleSubmit = async (e) => {
           className=" outline-none h-[130px] border-[1px] border-[#DEE3EE] placeholder:text-[#929296] font-helvetica  min-w-full py-3 pl-4 rounded-xl resize-none  "
         />
       </div>
-      <div onClick={()=> handleSubmit()} className=" py-4 cursor-pointer leading-[1] bg-figblue text-white w-full rounded-full font-helvetica text-[16px] font-medium flex items-center justify-center  ">
+      <div onClick={(e)=> handleSubmit(e)} className=" py-4 cursor-pointer leading-[1] bg-figblue text-white w-full rounded-full font-helvetica text-[16px] font-medium flex items-center justify-center  ">
         Submit
       </div>
     </div>
