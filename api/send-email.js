@@ -11,8 +11,8 @@ export default async function handler(req, res) {
   const { email,company,enquiry,country,number, name, message } = req.body
 
   const msg = {
-    to: 'samuheed786@gmail.com',
-    from: 'info@wildcurepharma.in', // Must be verified in SendGrid
+    from: 'samuheed786@gmail.com', // Must be verified in SendGrid
+    to: 'info@wildcurepharma.in', 
     subject: 'New enquiry!',
     text: `Name: ${name}\nNumber: ${number}\nEmail: ${email}\nCompany: ${company}\nCountry: ${country}\nEnquiry: ${enquiry}\nMessage: ${message}`,
   }
