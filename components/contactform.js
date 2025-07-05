@@ -13,6 +13,7 @@ const Contactform = () => {
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
   const [enquiry, setEnuiry] = useState("");
+  const [country, setcountry] = useState("");
 
   const params = useSearchParams();
 
@@ -270,6 +271,28 @@ const Contactform = () => {
     "Technical Support",
   ];
 
+const handleSubmit = async (e) => {
+  e.preventDefault()
+  await fetch('/api/send-email', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      company: company,
+      name: name,
+      number: number,
+      email: email,
+      country: country,
+      enquiry: enquiry,
+      message: message
+    })
+  }).then(res => res.json())
+    .then(data => {
+      if (data.success) alert('Email sent!')
+      else alert('Email failed.')
+    })
+}
+
+
   return (
     <div className=" flex flex-col gap-3 w-full md:w-fit ">
       <div className=" flex flex-col md:flex-row gap-3 md:gap-6 ">
@@ -351,6 +374,7 @@ const Contactform = () => {
                     className=" text-[14px] font-helvetica flex items-center gap-2 hover:bg-gray-100 duration-150 cursor-pointer px-1 rounded-md "
                     onClick={() => {
                       setCodeObject(item);
+                      setcountry(item.country)
                     }}
                   >
                     <span className=" w-[50px] ">{item.code}</span>
@@ -391,6 +415,7 @@ const Contactform = () => {
                     className=" text-[14px] font-helvetica flex items-center gap-2 hover:bg-gray-100 duration-150 cursor-pointer px-1 rounded-md "
                     onClick={() => {
                       setCodeObject(item);
+                      setcountry(item.country)
                     }}
                   >
                     <span>{item.country}</span>
@@ -450,7 +475,7 @@ const Contactform = () => {
           className=" outline-none h-[130px] border-[1px] border-[#DEE3EE] placeholder:text-[#929296] font-helvetica  min-w-full py-3 pl-4 rounded-xl resize-none  "
         />
       </div>
-      <div className=" py-4 cursor-pointer leading-[1] bg-figblue text-white w-full rounded-full font-helvetica text-[16px] font-medium flex items-center justify-center  ">
+      <div onClick={()=> handleSubmit()} className=" py-4 cursor-pointer leading-[1] bg-figblue text-white w-full rounded-full font-helvetica text-[16px] font-medium flex items-center justify-center  ">
         Submit
       </div>
     </div>
