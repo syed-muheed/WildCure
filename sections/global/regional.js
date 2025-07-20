@@ -14,8 +14,8 @@ const Regional = () => {
       <div className='pt-[3rem] space-y-10'>
         <Marketcard num={"01"} title={"Asia Pacific"} desc={"Strong partnerships in India, China, Japan, South Korea, and Southeast Asian countries, leveraging our proximity to major pharmaceutical manufacturing hubs for efficient service delivery"} src={src1}/>
         <Marketcard num={"02"} title={"Europe"} desc={"Established relationships with pharmaceutical companies in the UK, Germany, France, Italy, and emerging Eastern European markets, meeting their stringent quality requirements"} src={src2}/>
-        <Marketcard num={"03"} title={"North America"} desc={"FDA-compliant products serving pharmaceutical manufacturers across the United States and Canada"} src={src3}/>
-        <Marketcard num={"04"} title={"Middle East and Africa"} desc={"Growing presence supporting healthcare advancement in UAE, Saudi Arabia, Egypt, and South Africa"} src={src4}/>
+        {/* <Marketcard num={"03"} title={"North America"} desc={"FDA-compliant products serving pharmaceutical manufacturers across the United States and Canada"} src={src3}/> */}
+        <Marketcard num={"03"} title={"Middle East and Africa"} desc={"Growing presence supporting healthcare advancement in UAE, Saudi Arabia, Egypt, and South Africa"} src={src4}/>
       </div>
     </Padding>
   )
