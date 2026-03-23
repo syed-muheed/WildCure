@@ -19,7 +19,7 @@ const Contactus = () => {
             inquiries and are committed to providing you with prompt and
             professional assistance. Our team of experts is ready to answer your
             questions about our products, services, or partnership
-            opportunities.
+            opportunities. You can drop a query or directly reach out to us at <a>info@wildcurepharma.in</a>
           </div>
         </div>
       </div>
