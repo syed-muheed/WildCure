@@ -14,7 +14,8 @@
     "next": "15.0.2",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
-    "react-fast-marquee": "^1.6.5"
+    "react-fast-marquee": "^1.6.5",
+    "resend": "^6.9.4"
   },
   "resolutions": {
     "react-fast-marquee/react": ">=16.8.0 || ^18.0.0 || 19.0.0-rc"
